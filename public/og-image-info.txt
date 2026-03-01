@@ -1,0 +1,11 @@
+OG Image Placeholder
+
+To add a real OG image:
+1. Create a 1200x630px image
+2. Save it as public/og-image.png
+3. The image is already referenced in app/layout.tsx metadata
+
+You can use tools like:
+- Figma
+- Canva
+- og-playground.vercel.app
