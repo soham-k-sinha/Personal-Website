@@ -11,7 +11,7 @@ export function AboutSection() {
       <AnimatedSection>
         <SectionHeader
           title="About"
-          description="Analytical and research-oriented—passionate about AI, natural language, and practical solutions to meaningful problems."
+          description="Analytical and research oriented, passionate about AI, natural language, and practical solutions to meaningful problems."
         />
         <div className="max-w-4xl mx-auto space-y-16">
           {/* Story */}
@@ -22,22 +22,16 @@ export function AboutSection() {
             className="space-y-6 text-lg text-zinc-400 leading-relaxed"
           >
             <p>
-              I&apos;m a Computer Science and Mathematics double major (with a Business minor) at UMass Amherst, 
-              building a strong foundation in DSA, system design, computational proofs, and linear algebra. 
-              I&apos;m passionate about AI, natural language, and creating practical solutions that deliver 
-              real-world impact.
-            </p>
-            <p>
-              I&apos;ve built and shipped AI workflows at startups—from improving text classification at 
-              Finarkein and deploying agentic solutions for pharma at A79.ai, to leading a team on PDF 
-              parsing at Rubix. I also support 300+ students as an Undergraduate Course Assistant for 
-              introductory CS, and I love teaching and mentoring.
-            </p>
-            <p>
-              I&apos;m seeking a summer internship in technology, specifically data and computer science. 
-              When I&apos;m not coding, you&apos;ll find me on the court or field—I play basketball, cricket, 
-              table tennis, badminton, chess, and pickleball—or contributing to open source and side projects.
-            </p>
+  I am a Computer Science and Mathematics double major at UMass Amherst, with a Business minor, building a strong foundation in data structures and algorithms, system design, computational reasoning, and linear algebra. I am especially interested in artificial intelligence and natural language systems, and I enjoy turning complex ideas into practical, production-ready solutions that create real impact.
+</p>
+
+<p>
+  I have built and shipped AI systems in fast-moving startup environments. At Finarkein, I worked on improving text classification pipelines. At A79.ai, I helped deploy agentic AI solutions for pharmaceutical workflows. At Rubix, I led a team building a structured PDF parsing system that transformed unstructured documents into usable data. Alongside this, I support over 300 students as an Undergraduate Course Assistant for introductory computer science, where I focus on teaching, mentorship, and building strong problem-solving foundations.
+</p>
+
+<p>
+  I am currently seeking a summer internship in technology with a focus on data and computer science, where I can continue building systems that are both technically rigorous and genuinely useful. Outside of engineering, I am competitive and team-oriented by nature. You will usually find me playing basketball, cricket, table tennis, badminton, chess, or pickleball, or contributing to open source and side projects.
+</p>
           </motion.div>
 
           {/* Values */}
