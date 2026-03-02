@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Github, Linkedin, Download } from "lucide-react";
 import { useState } from "react";
 import { siteConfig } from "@/data/site";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#projects", label: "Projects" },
