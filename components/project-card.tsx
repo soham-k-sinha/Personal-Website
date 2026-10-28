@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Globe } from "lucide-react";
 import { Project } from "@/data/projects";
 import { useState } from "react";
 
@@ -55,6 +55,9 @@ export function ProjectCard({ project, onDetailsClick }: ProjectCardProps) {
         </div>
 
         <CardHeader className="relative z-10">
+          {project.highlight && (
+            <p className="text-sm text-zinc-500 font-mono">{project.highlight}</p>
+          )}
           <CardTitle className="text-2xl text-white group-hover:text-white transition-colors duration-300">
             {project.title}
           </CardTitle>
@@ -90,6 +93,20 @@ export function ProjectCard({ project, onDetailsClick }: ProjectCardProps) {
                   >
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Live Demo
+                  </a>
+                </Button>
+              </motion.div>
+            )}
+            {project.links.website && (
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button size="sm" className="bg-white text-black hover:bg-white/90 rounded-full font-semibold" asChild>
+                  <a
+                    href={project.links.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Globe className="h-4 w-4 mr-2" />
+                    Website
                   </a>
                 </Button>
               </motion.div>

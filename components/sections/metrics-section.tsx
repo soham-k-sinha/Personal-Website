@@ -25,7 +25,7 @@ export function MetricsSection() {
                 transition={{ duration: 0.3 }}
               />
               <div className="relative z-10">
-                <div className="text-3xl md:text-4xl font-bold mb-2 text-white font-mono">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-white font-mono">
                   {metric.value}
                 </div>
                 <div className="text-sm text-zinc-400 uppercase tracking-wide">{metric.label}</div>

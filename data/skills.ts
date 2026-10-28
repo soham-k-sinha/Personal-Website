@@ -6,72 +6,79 @@ export interface SkillGroup {
 export const skillGroups: SkillGroup[] = [
   {
     label: "Languages",
-    items: ["Python", "Java", "JavaScript", "SQL", "C"],
+    items: ["Python", "Java", "C", "SQL", "TypeScript", "JavaScript"],
   },
   {
-    label: "AI/ML",
+    label: "Backend & Databases",
+    items: ["FastAPI", "Node.js", "Express", "PostgreSQL", "Redis", "WebSockets", "REST APIs"],
+  },
+  {
+    label: "Cloud & Infrastructure",
     items: [
-      "AI Agents",
-      "LLMs",
-      "ML & AI",
-      "NLP",
+      "AWS ECS",
+      "AWS RDS",
+      "AWS S3",
+      "AWS ElastiCache",
+      "AWS SQS",
+      "AWS EventBridge",
+      "Docker",
+      "Linux",
+    ],
+  },
+  {
+    label: "AI/ML & Search",
+    items: [
+      "PyTorch",
       "Hugging Face",
       "BERT",
-      "Deep Learning",
+      "LLMs",
+      "AI Agents",
+      "scikit-learn",
+      "FAISS",
+      "CLIP",
+      "SigLIP",
+      "TF-IDF",
+      "Information Retrieval",
     ],
   },
   {
-    label: "Backend & APIs",
-    items: ["FastAPI", "Flask", "Git", "Docker", "Firebase"],
-  },
-  {
-    label: "Frontend",
-    items: ["React", "Next.js"],
-  },
-  {
-    label: "Other",
-    items: [
-      "System Design",
-      "Computational Proofs",
-      "Statistics",
-      "Linear Algebra",
-      "Data Structures & Algorithms",
-    ],
+    label: "Frontend & Developer Tools",
+    items: ["React", "Next.js", "Git", "pytest", "JUnit", "Playwright"],
   },
 ];
 
 export const whatIBuild = [
   {
-    title: "AI/ML Systems",
+    title: "Backend & Infrastructure",
     description:
-      "Building intelligent systems from data to deployment. Specializing in NLP, agentic workflows, fine-tuning, and production APIs.",
+      "I like building the systems behind the product—APIs, databases, integrations, and infrastructure that need to work reliably.",
     bullets: [
-      "Multi-step AI agentic workflows and LLM-powered applications",
-      "End-to-end ML pipelines: data cleaning, training, and evaluation",
-      "Fine-tuning and optimizing models (e.g. BERT) for real-world accuracy",
-      "FastAPI and Docker for scalable, production-ready services",
+      "Backend APIs and service architecture with Python and FastAPI",
+      "PostgreSQL data modeling, asynchronous operations, and Redis caching",
+      "AWS deployment and event-driven processing",
+      "Java concurrency, networking, and performance-oriented systems",
     ],
   },
   {
-    title: "Full-Stack AI Products",
+    title: "AI/ML & Search Systems",
     description:
-      "Shipping 0→1 products that combine AI with great UX. From browser extensions to financial and automation tools.",
+      "I'm interested in how models work, how we evaluate them, and how to turn them into useful systems.",
     bullets: [
-      "Chrome extensions and web apps with React and Next.js",
-      "Conversational interfaces and data visualization powered by LLMs",
-      "Real-time pipelines and collaborative features",
-      "Cross-platform automation (e.g. desktop workflows, Apple Shortcuts)",
+      "Machine-learning pipelines, fine-tuning, and model evaluation",
+      "Multimodal search, vector retrieval, and reranking",
+      "LLM-powered applications and structured agent workflows",
+      "Retrieval quality, data leakage, and performance benchmarking",
     ],
   },
   {
-    title: "Impact & Collaboration",
+    title: "Products & People",
     description:
-      "Seeking a summer internship in technology—data and computer science. Growth mindset, integrity, and commitment to building things that matter.",
+      "I enjoy building things from scratch, especially when there's a real problem to solve and good people to solve it with.",
     bullets: [
-      "Teaching and mentoring: UCA for 300+ students in introductory CS",
-      "Team leadership: led intern teams on PDF parsing and data extraction",
-      "Clear communication and collaboration with instructors and stakeholders",
-      "Analytical, research-oriented approach with a strong mathematical background",
+      "Co-founding and engineering NullifAI",
+      "Building and shipping projects under hackathon deadlines",
+      "Leading course assistants and supporting 300+ students",
+      "Learning new technologies by implementing systems from the fundamentals",
     ],
   },
 ];

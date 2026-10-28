@@ -12,8 +12,8 @@ export function ContactSection() {
     <Section id="contact">
       <AnimatedSection>
         <SectionHeader
-          title="Let's Build Together"
-          description="Looking for collaborators on ambitious projects. Reach out if you're working on something interesting."
+          title="Let's Connect"
+          description="I'm looking for Summer 2027 Software Engineering opportunities, especially in backend, infrastructure, and AI-powered products. I'm also always happy to talk about interesting projects, research, or things worth building."
         />
         <div className="max-w-2xl mx-auto space-y-12">
           {/* Social Links */}

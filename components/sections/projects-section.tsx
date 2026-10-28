@@ -5,7 +5,7 @@ import { AnimatedSection } from "@/components/animated-section";
 import { Section, SectionHeader } from "@/components/section";
 import { ProjectCard } from "@/components/project-card";
 import { ProjectModal } from "@/components/project-modal";
-import { featuredProjects, Project } from "@/data/projects";
+import { featuredProjects, earlierProjects, Project } from "@/data/projects";
 
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -21,7 +21,7 @@ export function ProjectsSection() {
       <AnimatedSection>
         <SectionHeader
           title="Featured Projects"
-          description="Building intelligent systems and scalable infrastructure. From ML research to production deployments."
+          description="Search engines, retrieval systems, hackathon builds, and a startup. Open any project for the engineering decisions and tradeoffs behind it."
         />
         <div className="grid md:grid-cols-2 gap-8">
           {featuredProjects.map((project) => (
@@ -32,6 +32,24 @@ export function ProjectsSection() {
             />
           ))}
         </div>
+        <p className="mt-12 text-center text-sm text-zinc-500">
+          Earlier projects:{" "}
+          {earlierProjects.map((project, index) => (
+            <span key={project.title}>
+              {index > 0 && " · "}
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={project.oneLiner}
+                aria-label={`${project.title} on GitHub`}
+                className="text-zinc-400 hover:text-white transition-colors"
+              >
+                {project.title}
+              </a>
+            </span>
+          ))}
+        </p>
       </AnimatedSection>
       <ProjectModal
         project={selectedProject}

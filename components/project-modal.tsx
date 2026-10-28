@@ -3,7 +3,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Video } from "lucide-react";
+import { ExternalLink, Github, Globe, Video } from "lucide-react";
 import { Project } from "@/data/projects";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { motion } from "framer-motion";
@@ -30,6 +30,16 @@ function ProjectDetails({ project }: { project: Project }) {
               <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-4 w-4 mr-2" />
                 Live Demo
+              </a>
+            </Button>
+          </motion.div>
+        )}
+        {project.links.website && (
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Button size="sm" className="bg-white text-black hover:bg-white/90 rounded-full font-semibold" asChild>
+              <a href={project.links.website} target="_blank" rel="noopener noreferrer">
+                <Globe className="h-4 w-4 mr-2" />
+                Website
               </a>
             </Button>
           </motion.div>
@@ -91,6 +101,32 @@ function ProjectDetails({ project }: { project: Project }) {
         <h3 className="text-lg font-semibold mb-3 text-white relative z-10">Outcome</h3>
         <p className="text-zinc-400 leading-relaxed relative z-10">{project.outcome}</p>
       </motion.div>
+
+      {/* Engineering decisions */}
+      {project.decisions.length > 0 && (
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.35 }}
+          className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all duration-300"
+        >
+          <h3 className="text-lg font-semibold mb-4 text-white">Engineering Decisions</h3>
+          <ul className="space-y-3">
+            {project.decisions.map((decision, index) => (
+              <motion.li 
+                key={index}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.45 + index * 0.05 }}
+                className="flex gap-3"
+              >
+                <span className="text-white mt-1">•</span>
+                <span className="text-zinc-400 leading-relaxed">{decision}</span>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
+      )}
 
       {/* Tradeoffs (if any) */}
       {project.tradeoffs && project.tradeoffs.length > 0 && (
@@ -154,6 +190,9 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto bg-black border border-white/10 backdrop-blur-xl">
           <DialogHeader>
+            {project.highlight && (
+              <p className="text-sm text-zinc-500 font-mono">{project.highlight}</p>
+            )}
             <DialogTitle className="text-2xl text-white font-bold tracking-tight">{project.title}</DialogTitle>
             <p className="text-zinc-400 text-sm mt-2">{project.oneLiner}</p>
           </DialogHeader>
@@ -167,6 +206,9 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerContent className="max-h-[90vh] bg-black border-t border-white/10 backdrop-blur-xl">
         <DrawerHeader>
+          {project.highlight && (
+            <p className="text-sm text-zinc-500 font-mono">{project.highlight}</p>
+          )}
           <DrawerTitle className="text-2xl text-white font-bold tracking-tight">{project.title}</DrawerTitle>
           <p className="text-zinc-400 text-sm mt-2">{project.oneLiner}</p>
         </DrawerHeader>

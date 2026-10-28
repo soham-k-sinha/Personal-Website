@@ -11,7 +11,7 @@ export function ExperienceSection() {
       <AnimatedSection>
         <SectionHeader
           title="Experience"
-          description="Building scalable systems and shipping AI products at top companies and startups."
+          description="Internships, a startup, and teaching. Most recent first."
         />
         <div className="max-w-4xl mx-auto space-y-12">
           {experienceItems.map((item, index) => (

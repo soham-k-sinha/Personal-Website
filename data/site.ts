@@ -14,6 +14,8 @@ export interface SiteConfig {
   headline: string;
   subheadline: string;
   tagline: string;
+  title: string;
+  description: string;
   proofChips: string[];
   metrics: Metric[];
   socials: Social;
@@ -23,19 +25,21 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: "Soham Sinha",
-  headline: "AI Systems Engineer • CS & Math @ UMass Amherst",
-  subheadline: "Designing and deploying intelligent systems at the intersection of machine learning and software engineering, from multi-step LLM workflows and fine-tuned models to scalable APIs and production-grade infrastructure.",
-  tagline: "Shipping AI that delivers measurable impact",
+  headline: "Software Engineer • CS + Math @ UMass Amherst",
+  subheadline: "I enjoy building software that works beyond the demo—from backend systems and cloud infrastructure to AI-powered products. Recently, I've worked on enterprise tools at Siemens Energy, built backend infrastructure at LUME Global, and co-founded NullifAI.",
+  tagline: "Software Engineer | Backend, Cloud & AI Systems",
+  title: "Soham Sinha | Software Engineer & CS/Math Student at UMass Amherst",
+  description: "Soham Sinha is a Computer Science and Mathematics student at UMass Amherst building backend systems, cloud infrastructure, and AI-powered products. Explore his engineering projects, internships, and hackathon wins.",
   proofChips: [
+    "HackHarvard '26 Winner",
     "TartanHacks '26 Winner",
-    "Gold Medalist HackImpact '23",
-    "Chancellor's Award",
-    "Dean's List",
+    "MIT Bitcoin Hackathon '26 Finalist",
+    "4.0 GPA",
   ],
   metrics: [
-    { label: "Years Experience", value: "1+" },
-    { label: "Projects Shipped", value: "6+" },
-    { label: "Internships", value: "5+" },
+    { label: "Platform Members Supported", value: "10,000+" },
+    { label: "Students Supported", value: "300+" },
+    { label: "Hackathon Wins", value: "3" },
     { label: "GPA", value: "4.0" },
   ],
   socials: {
@@ -43,6 +47,6 @@ export const siteConfig: SiteConfig = {
     linkedin: "https://www.linkedin.com/in/soham-sinha111/",
     email: "sohamkundan@gmail.com",
   },
-  resume: "https://drive.google.com/file/d/1gXqYhX0ciNq-qjZfJHp69_hnfwNPDRnc/view?usp=drive_link",
-  url: "https://yoursite.com",
+  resume: "https://drive.google.com/file/d/1J0eriFfmTrlsMsDWyWt7Jblsnc-n0Vgw/view?usp=sharing",
+  url: "https://www.sohamsinha.me",
 };

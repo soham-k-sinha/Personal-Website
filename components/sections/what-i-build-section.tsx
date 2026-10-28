@@ -12,7 +12,7 @@ export function WhatIBuildSection() {
       <AnimatedSection>
         <SectionHeader
           title="What I Build"
-          description="AI/ML systems, full-stack AI products, and impact through teaching and collaboration."
+          description="Backend systems, AI/ML and search, and the products and people around them."
         />
         <div className="grid md:grid-cols-3 gap-8">
           {whatIBuild.map((pillar, index) => (
