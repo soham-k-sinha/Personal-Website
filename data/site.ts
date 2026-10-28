@@ -26,7 +26,7 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: "Soham Sinha",
   headline: "Software Engineer • CS + Math @ UMass Amherst",
-  subheadline: "I enjoy building software that works beyond the demo—from backend systems and cloud infrastructure to AI-powered products. Recently, I've worked on enterprise tools at Siemens Energy, built backend infrastructure at LUME Global, and co-founded NullifAI.",
+  subheadline: "Software engineer who loves building things from scratch, tackling hard technical problems, and turning ambitious ideas into working products. From backend systems and cloud infrastructure to AI and machine learning, I'm always looking for something challenging to build next.",
   tagline: "Software Engineer | Backend, Cloud & AI Systems",
   title: "Soham Sinha | Software Engineer & CS/Math Student at UMass Amherst",
   description: "Soham Sinha is a Computer Science and Mathematics student at UMass Amherst building backend systems, cloud infrastructure, and AI-powered products. Explore his engineering projects, internships, and hackathon wins.",
